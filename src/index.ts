@@ -4,6 +4,10 @@ const { JSDOM } = jsdom;
 import { parseDate, getDuration, calculateColor } from './Utils/DateParse';
 
 
+/**
+ * Main function that reads data from a CSV file, parses it, applies colors to an SVG file based on the parsed data,
+ * and saves the modified SVG file.
+ */
 async function main() {
     const data = await fs.promises.readFile('dataExport.csv', 'utf8');
     const lines = data.split('\n');
